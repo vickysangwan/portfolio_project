@@ -4,9 +4,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <meta name="description" content=""> -->
-    <!-- <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"> -->
-    <!-- <meta name="generator" content="Jekyll v3.8.5"> -->
     <title>VIKASH SANGWAN</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
@@ -41,7 +38,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
         <a class="nav-item nav-link" href="#">Resume<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="allblog.html">Blog</a>
+        <a class="nav-item nav-link active" href="allblog.html">Blog</a>
         <a class="nav-item nav-link" href="https://www.linkedin.com/in/vikash-sangwan-608305169/">Linkdin</a>
         <a class="nav-item nav-link" href="#">Twitter</a>
         <a class="nav-item nav-link" href="https://github.com/vickysangwan">Git</a>
@@ -55,28 +52,17 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Hi,I'm Vikash</h1>
-      <p class="lead text-muted">Hey,my name is Vikash Sangwan i'm a python programmer , ethical hacker and full stack developer.</p>
+      <h1 class="jumbotron-heading">{{ blogdetails.title }}</h1>
       <p>
-        <a href="mailto:vickysangwan@protonmail.com" class="btn btn-primary my-2">Email Me</a>
+        <h5>{{ blogdetails.pub_date_pretty }}</h5>
       </p>
     </div>
   </section>
 
   <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-           <img class="card-img-top" height=290 src="{{ job.image.url }}">
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
+    <div class="container ">
+       <p class="card-text">{{ blogdetails.body }}</p>
+       <img class="img-fluid" src="{{ blogdetails.image.url }}" height=200 width=150>
     </div>
   </div>
 
