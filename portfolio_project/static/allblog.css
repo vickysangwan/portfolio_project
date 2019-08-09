@@ -1,0 +1,27 @@
+.blog_container{
+	float: left;
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: white;
+	height: 30%;
+	width: 80%;
+	border: 0;
+
+}
+
+.blog_image{
+
+	float: left;
+    margin-left: 0px;
+    height: 30%;
+    width: 30%;
+
+
+}
+
+.blog_discrption{
+	float: left;
+	margin-left: 10%;
+	height: 30%;
+	width:30%;
+}

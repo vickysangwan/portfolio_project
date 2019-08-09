@@ -1,14 +1,11 @@
-
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <meta name="description" content=""> -->
-    <!-- <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"> -->
-    <!-- <meta name="generator" content="Jekyll v3.8.5"> -->
     <title>VIKASH SANGWAN</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:700|Ubuntu:500&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -29,21 +26,21 @@
         }
       }
     </style>
-    <link href="album.css" rel="stylesheet">
+    <!-- <link href="album.css" rel="stylesheet"> -->
   </head>
   <body>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Vikash Sangwan </a>
+    <a class="navbar-brand" href="{% url 'home' %}">Vikash Sangwan </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="#">Resume<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="allblog.html">Blog</a>
+        <a class="nav-item nav-link" href="{% static 'Resume.pdf' %}">Resume<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{% url 'allblog' %}">Blog</a>
         <a class="nav-item nav-link" href="https://www.linkedin.com/in/vikash-sangwan-608305169/">Linkdin</a>
-        <a class="nav-item nav-link" href="#">Twitter</a>
+        <a class="nav-item nav-link" href="https://twitter.com/VIKASHSANGWAN13">Twitter</a>
         <a class="nav-item nav-link" href="https://github.com/vickysangwan">Git</a>
 
       </div>
@@ -55,11 +52,12 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Hi,I'm Vikash</h1>
-      <p class="lead text-muted">Hey,my name is Vikash Sangwan i'm a python programmer , ethical hacker and full stack developer.</p>
+      <h1 class="jumbotron-heading">Hi,I'm Vikash Sangwan</h1>
+      <p class="lead text-muted" style="font-family: 'Ubuntu', sans-serif;">Hey,my name is Vikash Sangwan i'm a python programmer , ethical hacker and full stack developer.</p>
       <p>
-        <a href="mailto:vickysangwan@protonmail.com" class="btn btn-primary my-2">Email Me</a>
+        <a href="mailto:vickysangwan@protonmail.com" class="btn btn-primary my-2" style="font-family: 'Ubuntu', sans-serif;">Email Me</a>
       </p>
+              <img src="{% static 'DSC_0075.jpg' %}" height="300">
     </div>
   </section>
 
@@ -71,7 +69,7 @@
           <div class="card mb-4 shadow-sm">
            <img class="card-img-top" height=290 src="{{ job.image.url }}">
             <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
+              <p class="card-text" style="font-family: 'Lato', sans-serif;">{{ job.summary }}</p>
             </div>
           </div>
         </div>
