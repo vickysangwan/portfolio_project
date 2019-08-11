@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>VIKASH SANGWAN</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:700|Ubuntu:500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share:700i&display=swap" rel="stylesheet">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link rel="stylesheet" type="text/css" href="{% static 'allblog.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
@@ -26,12 +28,11 @@
         }
       }
     </style>
-    <!-- <link href="album.css" rel="stylesheet"> -->
   </head>
   <body>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'home' %}">Vikash Sangwan </a>
+    <a class="navbar-brand fontss active" href="{% url 'home' %}" style="font-family: 'Share', cursive;">Vikash Sangwan </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,7 +43,6 @@
         <a class="nav-item nav-link" href="https://www.linkedin.com/in/vikash-sangwan-608305169/">Linkdin</a>
         <a class="nav-item nav-link" href="https://twitter.com/VIKASHSANGWAN13">Twitter</a>
         <a class="nav-item nav-link" href="https://github.com/vickysangwan">Git</a>
-
       </div>
     </div>
   </nav>
@@ -52,12 +52,13 @@
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Hi,I'm Vikash Sangwan</h1>
-      <p class="lead text-muted" style="font-family: 'Ubuntu', sans-serif;">Hey,my name is Vikash Sangwan i'm a python programmer , ethical hacker and full stack developer.</p>
+      <h1 class="jumbotron-heading" style="letter-spacing: 2px;">VIKASH SANGWAN</h1>
+      <p class="lead text-muted" style="font-family: 'Ubuntu', sans-serif;letter-spacing: 2px;">ETHICAL HACKER , FULL STACK DEVELOPER AND PYTHON PROGRAMMER</p>
+      <p class="lead text-muted" style="font-family: 'Ubuntu', sans-serif;letter-spacing: 2px;">THINK | CREATE | DEPLOY</p>
       <p>
-        <a href="mailto:vickysangwan@protonmail.com" class="btn btn-primary my-2" style="font-family: 'Ubuntu', sans-serif;">Email Me</a>
+        <a href="mailto:vickysangwan@protonmail.com" class="btn btn-primary my-2" style="font-family: 'Ubuntu', sans-serif; letter-spacing: 2px;">Email</a>
       </p>
-              <img src="{% static 'DSC_0075.jpg' %}" height="300">
+              <img src="{% static 'DSC_0075.jpg' %}" class="img-rounded" height="300">
     </div>
   </section>
 

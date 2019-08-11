@@ -1,12 +1,16 @@
-{% load static %}
+{% load static  %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>VIKASH SANGWAN</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-    <link rel="stylesheet" type="text/css" href="{% static 'allblog.css' %}">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Vikas Sangwan blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share:700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
@@ -26,12 +30,12 @@
         }
       }
     </style>
-    <!-- <link href="album.css" rel="stylesheet"> -->
+  
   </head>
   <body>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'home' %}">Vikash Sangwan </a>
+    <a class="navbar-brand fontss" href="{% url 'home' %}" style="font-family: 'Share', cursive;">Vikash Sangwan </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,33 +51,40 @@
     </div>
   </nav>
 </header>
-  <main role="main">
+<main role="main">
+
+  <div class="jumbotron">
     <div class="container">
-
-    <h1 class="text-center pt-3">Welcome to Sangwan's Blog</h1>
-    <br />
-    <br />
-    <h2>Latest Posts</h2>
-    <hr />
-
-    {% for blog in blogs.all %}
-    <a href="{% url 'details' blog.id %}"><h3>{{ blog.title }}</h3></a>
-    {{ blog.pub_date_pretty }}
-    <br />
-    <img class="img-fluid" src="{{ blog.image.url }}" height=200 width=200 />
-    <br />
-    <p>{{ blog.summary }}</p>
-    {% endfor %}
-
+      <h1 class="display-3 text-center" style="font-family: 'Raleway', sans-serif;font-size: 43px;">Welcome to Sangwan's blog</h1>
+      <h5 class="text-center" style="letter-spacing: 2px;">THINK | CREATE | DEPLOY</h5>
+    </div>
   </div>
 
-  </main>
-<footer class="text-muted">
-  <div class="container text-center">
-  <p>&copy; Vikas Sangwan  {% now "Y" %}</p>
-  </div>
+  <div class="container">
+    <div class="row">
+    {% for blog in blogs.all reversed %}
+      <div class="col-md-4">
+        <h3 style="color: black;">{{ blog.title }}</h3>
+        <p style="font-size: 12px;">{{ blog.pub_date_pretty }}</p>
+        <img class="img-thumbnail" src="{{ blog.image.url }}" height="250px" width="300px" />
+        <br>
+        <p style="width: 300px;font-family: 'Blinker', sans-serif;">{{ blog.summary }}</p>
+        <a href="{% url 'details' blog.id %}" class="btn btn-outline-dark" style="font-family: 'Ubuntu', sans-serif; letter-spacing: 2px;">Read More</a>
+      </div>
+    {% endfor  %}
+    </div>
+
+    <hr>
+
+  </div> 
+
+</main>
+
+<footer class="container text-center">
+    <p>&copy; Vikas Sangwan  {% now "Y" %}</p>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script></body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </html>
